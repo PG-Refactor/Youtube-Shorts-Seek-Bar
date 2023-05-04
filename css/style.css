@@ -1,0 +1,29 @@
+yt-icon-progress-bar {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 24px;
+    box-sizing: border-box;
+}
+
+.youtube-short-extension-progress-bar {
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    width: 320px;
+    height: 8px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.youtube-short-extension-progress-bar::-webkit-progress-value {
+    background-color: red;
+    border-radius: 15px;
+}
+
+.youtube-short-extension-progress-bar::-webkit-progress-bar {
+    background-color: gray;
+    border-radius: 15px;
+ }

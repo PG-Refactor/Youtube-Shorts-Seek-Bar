@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube Short Seek Bar",
+    "version": "1.0.0",
+    "description": "You can use seek bar in Youtube Short.",
+    "content_scripts": [{
+            "matches": ["https://www.youtube.com/*"],
+            "css": ["css/style.css"],
+            "js": ["dist/youtube-short-seek-bar.js"]
+        }
+    ]
+}
