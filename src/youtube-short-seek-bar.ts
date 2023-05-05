@@ -57,6 +57,7 @@
         private progressBarClickEvent = (e: MouseEvent) => {
             e.preventDefault();
             this.currentProgressBar = e.currentTarget as HTMLProgressElement;
+            this.updateVideoTimeAndProgressBar(e);
             document.addEventListener('mousemove', this.updateVideoTimeAndProgressBar);
             document.addEventListener('mouseup', (e: MouseEvent) => {
                 e.preventDefault();
