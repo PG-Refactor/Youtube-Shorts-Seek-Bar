@@ -5,7 +5,7 @@ By using this, You can use seek-bar in YouTube Short.
 
 # How to use
 1. Download zip file from Releases, and unzip it.
-2. Access chrome://extensions/.
+2. Access chrome://extensions/
 3. Check Developper mode.
 4. Click Pack extension and select unziped folder.
 5. You can use this extension. 
