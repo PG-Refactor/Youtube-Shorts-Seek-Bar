@@ -14,7 +14,7 @@
 
         private getVideo = () => {
             const videos = document.querySelectorAll('video');
-            let video = null;
+            let video: HTMLMediaElement | null  = null;
             for (let i = 0; i < videos.length; i++) {
                 if (videos[i].hasAttribute('src')) {
                     video = videos[i];
@@ -34,8 +34,7 @@
                 if (!isNaN(this.video?.duration!))
                     progressBar.max = this.video?.duration!;
                 progressBar.value = 0;
-                progressBar.classList.add('youtube-short-extension-progress-bar');
-                // progressBar.addEventListener('click', this.progressBarClickEvent);
+                progressBar.classList.add('youtube-shorts-extension-progress-bar');
                 progressBar.addEventListener('mousedown', this.progressBarClickEvent);
                 progressBars.push(progressBar);
                 let ytIconProgressBar = document.createElement('yt-icon-progress-bar');
