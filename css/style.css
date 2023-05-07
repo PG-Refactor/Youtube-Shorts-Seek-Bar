@@ -8,7 +8,7 @@ yt-icon-progress-bar {
     box-sizing: border-box;
 }
 
-.youtube-short-extension-progress-bar {
+.youtube-shorts-extension-progress-bar {
     position: relative;
     background-color: white;
     border-radius: 15px;
@@ -18,12 +18,12 @@ yt-icon-progress-bar {
     cursor: pointer;
 }
 
-.youtube-short-extension-progress-bar::-webkit-progress-value {
+.youtube-shorts-extension-progress-bar::-webkit-progress-value {
     background-color: red;
     border-radius: 15px;
 }
 
-.youtube-short-extension-progress-bar::-webkit-progress-bar {
+.youtube-shorts-extension-progress-bar::-webkit-progress-bar {
     background-color: gray;
     border-radius: 15px;
  }
