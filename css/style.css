@@ -3,7 +3,7 @@ yt-icon-progress-bar {
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 85%;
     height: 24px;
     box-sizing: border-box;
 }
@@ -12,7 +12,7 @@ yt-icon-progress-bar {
     position: relative;
     background-color: white;
     border-radius: 15px;
-    width: 320px;
+    width: 90%;
     height: 8px;
     pointer-events: auto;
     cursor: pointer;
