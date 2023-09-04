@@ -1,7 +1,7 @@
 # Youtube-Shorts-Seek-Bar
 This is a Chrome Extension.
 By using this, You can use seek-bar in YouTube Shorts.
-![Youtube-Short-Seek-Bar](https://user-images.githubusercontent.com/119599381/236484772-12027f48-0bef-49fb-a60d-632745d4a373.png)
+![youtube-shorts-seek-bar](https://github.com/PG-Refactor/Youtube-Shorts-Seek-Bar/assets/119599381/fe400a88-626d-4952-962b-5d880307ba9f)
 
 # How to use
 1. Download zip file from Releases, and unzip it.
