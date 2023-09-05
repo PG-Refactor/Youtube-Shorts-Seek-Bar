@@ -6,6 +6,8 @@ yt-icon-progress-bar {
     width: 85%;
     height: 24px;
     box-sizing: border-box;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .youtube-shorts-extension-progress-bar {
@@ -14,8 +16,6 @@ yt-icon-progress-bar {
     border-radius: 15px;
     width: 90%;
     height: 8px;
-    pointer-events: auto;
-    cursor: pointer;
 }
 
 .youtube-shorts-extension-progress-bar::-webkit-progress-value {
@@ -36,6 +36,8 @@ yt-icon-volume-bar {
     width: 20%;
     height: 24px;
     box-sizing: border-box;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .youtube-shorts-extension-volume-bar {
@@ -43,8 +45,6 @@ yt-icon-volume-bar {
     background-color: white;
     width: 80%;
     height: 4px;
-    pointer-events: auto;
-    cursor: pointer;
 }
 
 .youtube-shorts-extension-volume-bar::-webkit-progress-value {
