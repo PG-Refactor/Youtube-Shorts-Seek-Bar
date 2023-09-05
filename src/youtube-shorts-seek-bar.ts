@@ -35,11 +35,11 @@
                     progressBar.max = this.video?.duration!;
                 progressBar.value = 0;
                 progressBar.classList.add('youtube-shorts-extension-progress-bar');
-                progressBar.addEventListener('mousedown', this.progressBarClickEvent);
                 progressBars.push(progressBar);
                 let ytIconProgressBar = document.createElement('yt-icon-progress-bar');
                 ytIconProgressBar.classList.add('style-scope');
                 ytIconProgressBar.classList.add('ytd-shorts-player-controls"');
+                ytIconProgressBar.addEventListener('mousedown', this.progressBarClickEvent);
                 ytIconProgressBars.push(ytIconProgressBar);
                 ytIconProgressBar.appendChild(progressBar);
                 roots[i].appendChild(ytIconProgressBar);
@@ -55,13 +55,14 @@
 
         private progressBarClickEvent = (e: MouseEvent) => {
             e.preventDefault();
-            this.currentProgressBar = e.currentTarget as HTMLProgressElement;
+            const ytIconProgressBar = e.currentTarget as HTMLElement;
+            this.currentProgressBar = ytIconProgressBar?.querySelector('.youtube-shorts-extension-progress-bar');
             this.updateVideoTimeAndProgressBar(e);
             document.addEventListener('mousemove', this.updateVideoTimeAndProgressBar);
             document.addEventListener('mouseup', (e: MouseEvent) => {
                 e.preventDefault();
                 document.removeEventListener('mousemove', this.updateVideoTimeAndProgressBar);
-                this.currentProgressBar?.addEventListener('mousedown', this.progressBarClickEvent);
+                ytIconProgressBar?.addEventListener('mousedown', this.progressBarClickEvent);
             }, { once: true });
         };
 
@@ -129,11 +130,11 @@
                 volumeBar.max = 1;
                 volumeBar.value = this.video?.volume!;
                 volumeBar.classList.add('youtube-shorts-extension-volume-bar');
-                volumeBar.addEventListener('mousedown', this.volumeBarClickEvent);
                 volumeBars.push(volumeBar);
                 let ytIconVolumeBar = document.createElement('yt-icon-volume-bar');
                 ytIconVolumeBar.classList.add('style-scope');
                 ytIconVolumeBar.classList.add('ytd-shorts-player-controls"');
+                ytIconVolumeBar.addEventListener('mousedown', this.volumeBarClickEvent);
                 ytIconVolumeBars.push(ytIconVolumeBar);
                 ytIconVolumeBar.appendChild(volumeBar);
                 roots[i].appendChild(ytIconVolumeBar);
@@ -149,13 +150,14 @@
 
         private volumeBarClickEvent = (e: MouseEvent) => {
             e.preventDefault();
-            this.currentVolumeBar = e.currentTarget as HTMLProgressElement;
+            const ytIconVolumeBar = e.currentTarget as HTMLElement
+            this.currentVolumeBar = ytIconVolumeBar?.querySelector('.youtube-shorts-extension-volume-bar');
             this.updateVideoVolumeAndVolumeBar(e);
             document.addEventListener('mousemove', this.updateVideoVolumeAndVolumeBar);
             document.addEventListener('mouseup', (e: MouseEvent) => {
                 e.preventDefault();
                 document.removeEventListener('mousemove', this.updateVideoVolumeAndVolumeBar);
-                this.currentVolumeBar?.addEventListener('mousedown', this.volumeBarClickEvent);
+                ytIconVolumeBar?.addEventListener('mousedown', this.volumeBarClickEvent);
             }, { once: true });
         };
 
