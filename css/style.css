@@ -4,7 +4,7 @@ yt-icon-progress-bar {
     justify-content: center;
     align-items: center;
     width: 85%;
-    height: 24px;
+    height: 48px;
     box-sizing: border-box;
     pointer-events: auto;
     cursor: pointer;
@@ -27,30 +27,3 @@ yt-icon-progress-bar {
     background-color: gray;
     border-radius: 15px;
 }
-
-yt-icon-volume-bar {
-    display: inline-flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 24px;
-    box-sizing: border-box;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-.youtube-shorts-extension-volume-bar {
-    position: relative;
-    background-color: white;
-    width: 80%;
-    height: 4px;
-}
-
-.youtube-shorts-extension-volume-bar::-webkit-progress-value {
-    background-color: white;
-}
-
-.youtube-shorts-extension-volume-bar::-webkit-progress-bar {
-    background-color: gray;
- }
