@@ -1,13 +1,12 @@
 (() => {
     class ProgressBar {
         private video: HTMLMediaElement | null;
-        private ytIconProgressBar: HTMLElement;
         private progressBar: HTMLProgressElement;
 
 
-        constructor(rootElementName: string) {
+        constructor(beforeElementName: string) {
             this.video = this.getVideo();
-            [this.ytIconProgressBar, this.progressBar] = this.create(rootElementName);
+            this.progressBar = this.create(beforeElementName);
         }
 
         private getVideo = () => {
@@ -23,7 +22,7 @@
             return video;
         }
 
-        private create = (beforeElementName: string): [HTMLElement, HTMLProgressElement] => {
+        private create = (beforeElementName: string): HTMLProgressElement => {
             const beforeElement = document.querySelector(beforeElementName);
             let progressBar = document.createElement('progress');
             if (!isNaN(this.video?.duration!))
@@ -37,7 +36,7 @@
             ytIconProgressBar.appendChild(progressBar);
             beforeElement?.after(ytIconProgressBar);
 
-            return [ytIconProgressBar, progressBar];
+            return progressBar;
         }
 
         private updateVideoTime = (time: number) => {
@@ -152,5 +151,4 @@
             sleep(1, main);
         }, {once: true});
     }
-
 })();
